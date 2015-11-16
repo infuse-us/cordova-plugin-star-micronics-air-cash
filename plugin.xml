@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-star-micronics-air-cash" version="1.0.0">
+    
+    <name>StarMicronicsAirCash</name>
+    <description>Cordova StarMicronicsAirCash Plugin</description>
+    <js-module src="www/star-micronics-air-cash.js" name="starMicronicsAirCash">
+        <clobbers target="cordova.plugins.starMicronicsAirCash" />
+    </js-module>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="CDVStarMicronicsAirCash">
+                <param name="ios-package" value="CDVStarMicronicsAirCash"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVStarMicronicsAirCash.h" />
+        <source-file src="src/ios/CDVStarMicronicsAirCash.m" />
+        <framework src="CoreBluetooth.framework" />
+        <framework src="src/ios/lib/StarIO.framework" custom="true" />
+    </platform>
+
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="CDVStarMicronicsAirCash">
+                <param name="android-package" value="us.infuse.starmicronics.CDVStarMicronicsAirCash" />
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.INTERNET"/>
+            <uses-permission android:name="android.permission.BLUETOOTH"/>
+            <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+        </config-file>
+
+        <lib-file src="src/android/libs/StarIOPort3.1.jar" />
+        <source-file src="src/android/CDVStarMicronicsAirCash.java" target-dir="src/us/infuse/starmicronics" />
+    </platform>
+
+</plugin>
