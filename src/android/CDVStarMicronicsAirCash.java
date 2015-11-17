@@ -33,7 +33,7 @@ public class CDVStarMicronicsAirCash extends CordovaPlugin {
         if (action.equals("isOnline")) {
             isOnline(args.getString(0), args.getString(1), callbackContext);
         } else if (action.equals("isOpen")) {
-            isOnline(args.getString(0), args.getString(1), callbackContext);
+            isOpen(args.getString(0), args.getString(1), callbackContext);
         } else if (action.equals("openCashDrawer")) {
             this.openCashDrawer(args.getString(0), args.getString(1), callbackContext);
         } else {
