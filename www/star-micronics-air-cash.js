@@ -2,6 +2,7 @@ var exec = require('cordova/exec');
 
 var StarMicronicsAirCash = function() {};
 var errorObjFunc = function(cb) {
+	'use strict';
 	return function(message) {
 		return cb(new Error(message));
 	};
@@ -13,6 +14,7 @@ StarMicronicsAirCash.prototype.isOnline = function(
 	successCallback,
 	errorCallback
 ) {
+	'use strict';
 	return exec(successCallback,
 		errorObjFunc(errorCallback),
 		'CDVStarMicronicsAirCash',
@@ -29,6 +31,7 @@ StarMicronicsAirCash.prototype.isOpen = function(
 	successCallback,
 	errorCallback
 ) {
+	'use strict';
 	return exec(successCallback,
 		errorObjFunc(errorCallback),
 		'CDVStarMicronicsAirCash',
@@ -46,6 +49,7 @@ StarMicronicsAirCash.prototype.openCashDrawer = function(
 	successCallback,
 	errorCallback
 ) {
+	'use strict';
 	return exec(successCallback,
 		errorObjFunc(errorCallback),
 		'CDVStarMicronicsAirCash',
