@@ -1,0 +1,31 @@
+{
+  "name": "cordova-plugin-star-micronics-air-cash",
+  "version": "1.0.0",
+  "description": "Cordova Plugin that Supports Common Tasks for the StarMicronics AirCash Cash Drawer.",
+  "main": "www/star-micronics-air-cash.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infuse-us/cordova-plugin-star-micronics-air-cash.git"
+  },
+  "keywords": [
+    "cordova",
+    "plugin",
+    "star",
+    "micronics",
+    "air",
+    "cash",
+    "drawer",
+    "open",
+    "close",
+    "online"
+  ],
+  "author": "Infuse.us",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/infuse-us/cordova-plugin-star-micronics-air-cash/issues"
+  },
+  "homepage": "https://github.com/infuse-us/cordova-plugin-star-micronics-air-cash#readme"
+}
